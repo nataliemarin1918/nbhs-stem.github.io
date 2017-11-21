@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div id="images">
+  <button id="before"> &lt; </button>
+  <img src="#">
+  <button id="next"> &gt; </button>
+</div>
+
+<div id="welcome">
+    <p> !WELCOME TO THE NDHA STEM ACADEMY WEBSITE! </p>
+</div>
+
+<div class="post">
+			{% for post in site.posts limit:3 %}
+			<h2>{{post.title}}</h2>
+			<h3>{{post.date}}</h3>
+			<p>{{post.excerpt}}</p>
+	<h3> Click <button id="here"> <a href=" {{post.url}}"> here </a> </button> to read more! </h3>
+			{% endfor %}
+</div>
